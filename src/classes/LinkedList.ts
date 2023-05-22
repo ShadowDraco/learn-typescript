@@ -33,4 +33,15 @@ export default class LinkedList {
 
     return values;
   }
+
+  includes(value: String | Number) {
+    let current = this.head;
+
+    while (current != null) {
+      if (current.data === value) return true;
+
+      current = current.next;
+    }
+    return false;
+  }
 }
